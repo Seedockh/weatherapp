@@ -50,13 +50,36 @@
                     <view key="view" contentMode="scaleToFill" id="chv-Gk-x5j">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="QjC-5v-VbB">
+                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                                <color key="backgroundColor" red="0.092279963195323944" green="0.26853504776954651" blue="0.53101807832717896" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="HeaderCell_ID" rowHeight="244" id="gsz-WX-NWj">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="244"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="gsz-WX-NWj" id="smy-eL-9hX">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="243.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <color key="backgroundColor" red="0.092279963195323944" green="0.26853504776954651" blue="0.53101807832717896" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
                         <color key="backgroundColor" red="0.092279963195323944" green="0.26853504776954651" blue="0.53101807832717896" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="QjC-5v-VbB" firstAttribute="top" secondItem="2X4-6T-xs5" secondAttribute="top" id="AR4-Od-hgd"/>
+                            <constraint firstItem="2X4-6T-xs5" firstAttribute="trailing" secondItem="QjC-5v-VbB" secondAttribute="trailing" id="CUa-ua-l38"/>
+                            <constraint firstItem="QjC-5v-VbB" firstAttribute="leading" secondItem="2X4-6T-xs5" secondAttribute="leading" id="dNI-Av-bh7"/>
+                            <constraint firstItem="2X4-6T-xs5" firstAttribute="bottom" secondItem="QjC-5v-VbB" secondAttribute="bottom" id="rTm-FI-I4N"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="2X4-6T-xs5"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FIX-8J-Sjd" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1250" y="24"/>
+            <point key="canvasLocation" x="1248.8" y="23.838080959520241"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="KRi-v3-9Ca">
