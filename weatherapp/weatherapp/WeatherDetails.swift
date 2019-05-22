@@ -34,14 +34,14 @@ struct WeatherDetails: Decodable {
 
     // in "hourly.data"
     struct HourlyDetails: Decodable {
-        var time: Int32
+        var time: Double
         var icon: String
         var humidity: Float
         var temperature: Float
     }
     // in "daily.data"
     struct DailyDetails: Decodable {
-        var time: Int32
+        var time: Double
         var icon: String
         var temperatureMin: Float
         var temperatureMax: Float

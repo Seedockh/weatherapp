@@ -13,8 +13,7 @@ class HourlyTextCell: UITableViewCell {
     @IBOutlet weak var hourlyText: UILabel!
     
     func configure(withWeatherDetails weatherDetails: WeatherDetails?) {
-        print(weatherDetails?.hourly.summary)
-        hourlyText.text = weatherDetails?.hourly.summary ?? "tototata"
+        hourlyText.text = weatherDetails?.hourly.summary
     }
     
 }
