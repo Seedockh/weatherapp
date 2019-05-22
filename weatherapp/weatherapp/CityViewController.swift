@@ -11,10 +11,22 @@ import MapKit
 
 class CityViewController: UIViewController {
 
-    var city: MKPointAnnotation?
+    var city: MKPointAnnotation!
+    var weatherDetails : WeatherDetails?
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        title = city?.title
+        title = city.title
+        getForecastWeather()
+    }
+    
+    func getForecastWeather() {
+        APIHandler.requestForecastWeather(latitude: city.coordinate.latitude, longitude: city.coordinate.longitude, success: { (data) in
+            let decoder = JSONDecoder()
+            self.weatherDetails = try? decoder.decode(WeatherDetails.self, from: data)
+            print(self.weatherDetails!)
+        }) { (error) in
+            print(error)
+        }
     }
 }

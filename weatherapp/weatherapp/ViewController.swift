@@ -13,8 +13,6 @@ import CoreLocation
 class ViewController: UIViewController, MKMapViewDelegate {
     
     @IBOutlet weak var mapView: MKMapView!
-  
-    var weatherDetails : WeatherDetails?
     
     let cityList = [
         City(name: "San Francisco", coordinates: CLLocationCoordinate2D(latitude: 37.7749, longitude: -122.4194)),
@@ -47,17 +45,6 @@ class ViewController: UIViewController, MKMapViewDelegate {
             pin.title = city.name
             mapView.addAnnotation(pin)
         }
-        getForecastWeather()
-    }
-  
-    func getForecastWeather() {
-      APIHandler.requestForecastWeather(latitude: "48", longitude: "2", success: { (data) in
-          let decoder = JSONDecoder()
-          self.weatherDetails = try? decoder.decode(WeatherDetails.self, from: data)
-          print(self.weatherDetails!)
-      }) { (error) in
-          print(error)
-      }
     }
     
     func mapView(_ mapView: MKMapView, didSelect view: MKAnnotationView)
