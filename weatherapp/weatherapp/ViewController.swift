@@ -9,12 +9,22 @@
 import UIKit
 
 class ViewController: UIViewController {
+    
+    var weatherDetails : WeatherDetails?
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        getForecastWeather()
     }
 
+    func getForecastWeather() {
+        APIHandler.requestForecastWeather(latitude: "48", longitude: "2", success: { (data) in
+            let decoder = JSONDecoder()
+            self.weatherDetails = try? decoder.decode(WeatherDetails.self, from: data)
+            print(self.weatherDetails!)
+        }) { (error) in
+            print(error)
+        }
+    }
 
 }
-
