@@ -21,9 +21,9 @@ class CityViewController: UIViewController, UITableViewDataSource {
         case hourlyText
         case hourly
         case dailyText
-//        case daily
-//        case extraTitle
-//        case extra
+        case daily
+        case extraTitle
+        case extra
     }
     
     override func viewDidLoad() {
@@ -31,10 +31,6 @@ class CityViewController: UIViewController, UITableViewDataSource {
         title = city.title
         tableView.dataSource = self
         getForecastWeather()
-    }
-    
-    func numberOfSections(in tableView: UITableView) -> Int {
-        return 4
     }
     
     func getForecastWeather() {
@@ -45,6 +41,10 @@ class CityViewController: UIViewController, UITableViewDataSource {
         }) { (error) in
             print(error)
         }
+    }
+    
+    func numberOfSections(in tableView: UITableView) -> Int {
+        return 7
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -66,31 +66,52 @@ class CityViewController: UIViewController, UITableViewDataSource {
                 return count
             case .dailyText:
                 return 1
+            case .daily:
+                return weatherDetails?.daily.data.count ?? 0
+            case .extraTitle:
+                return 1
+            case .extra:
+                return 2
         }
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         switch Section(rawValue: indexPath.section)! {
-        case .header:
-            if let cell = tableView.dequeueReusableCell(withIdentifier: "HeaderCell_ID", for: indexPath) as? HeaderCell {
-                cell.configure(withWeatherDetails: weatherDetails)
-                return cell
-            }
-        case .hourlyText:
-            if let cell = tableView.dequeueReusableCell(withIdentifier: "HourlyTextCell_ID", for: indexPath) as? HourlyTextCell {
-                cell.configure(withWeatherDetails: weatherDetails)
-                return cell
-            }
-        case .hourly:
-            if let cell = tableView.dequeueReusableCell(withIdentifier: "HourlyCell_ID", for: indexPath) as? HourlyCell {
-                cell.configure(withWeatherDetails: weatherDetails, index: indexPath.item)
-                return cell
-            }
-        case .dailyText:
-            if let cell = tableView.dequeueReusableCell(withIdentifier: "DailyTextCell_ID", for: indexPath) as? DailyTextCell {
-                cell.configure(withWeatherDetails: weatherDetails)
-                return cell
-            }
+            case .header:
+                if let cell = tableView.dequeueReusableCell(withIdentifier: "HeaderCell_ID", for: indexPath) as? HeaderCell {
+                    cell.configure(withWeatherDetails: weatherDetails)
+                    return cell
+                }
+            case .hourlyText:
+                if let cell = tableView.dequeueReusableCell(withIdentifier: "HourlyTextCell_ID", for: indexPath) as? HourlyTextCell {
+                    cell.configure(withWeatherDetails: weatherDetails)
+                    return cell
+                }
+            case .hourly:
+                if let cell = tableView.dequeueReusableCell(withIdentifier: "HourlyCell_ID", for: indexPath) as? HourlyCell {
+                    cell.configure(withWeatherDetails: weatherDetails, index: indexPath.item)
+                    return cell
+                }
+            case .dailyText:
+                if let cell = tableView.dequeueReusableCell(withIdentifier: "DailyTextCell_ID", for: indexPath) as? DailyTextCell {
+                    cell.configure(withWeatherDetails: weatherDetails)
+                    return cell
+                }
+            case .daily:
+                if let cell = tableView.dequeueReusableCell(withIdentifier: "DailyCell_ID", for: indexPath) as? DailyCell {
+                    cell.configure(withWeatherDetails: weatherDetails, index: indexPath.item)
+                    return cell
+                }
+            case .extraTitle:
+                if let cell = tableView.dequeueReusableCell(withIdentifier: "ExtraTitleCell_ID", for: indexPath) as? ExtraTitleCell {
+                    cell.configure(withWeatherDetails: weatherDetails)
+                    return cell
+                }
+            case .extra:
+                if let cell = tableView.dequeueReusableCell(withIdentifier: "ExtraCell_ID", for: indexPath) as? ExtraCell {
+                    cell.configure(withWeatherDetails: weatherDetails, index: indexPath.item)
+                    return cell
+                }
         }
         return UITableViewCell()
     }

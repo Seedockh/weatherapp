@@ -21,6 +21,9 @@
 		62998E9A229553140071F5FA /* HourlyTextCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62998E99229553140071F5FA /* HourlyTextCell.swift */; };
 		62998E9E229565740071F5FA /* Lists.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62998E9D229565740071F5FA /* Lists.swift */; };
 		62998EA0229568790071F5FA /* CityCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62998E9F229568790071F5FA /* CityCell.swift */; };
+		B1116EB422959ED900FECC99 /* DailyCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1116EB322959ED900FECC99 /* DailyCell.swift */; };
+		B1116EB62295A6BB00FECC99 /* ExtraTitleCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1116EB52295A6BB00FECC99 /* ExtraTitleCell.swift */; };
+		B1116EB82295A94E00FECC99 /* ExtraCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1116EB72295A94E00FECC99 /* ExtraCell.swift */; };
 		B1933D03229537B700F6F397 /* CityViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1933D02229537B700F6F397 /* CityViewController.swift */; };
 		B1933D05229563B100F6F397 /* HourlyCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1933D04229563B100F6F397 /* HourlyCell.swift */; };
 		B1933D072295805A00F6F397 /* DailyTextCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1933D062295805A00F6F397 /* DailyTextCell.swift */; };
@@ -49,6 +52,9 @@
 		62998E9D229565740071F5FA /* Lists.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Lists.swift; sourceTree = "<group>"; };
 		62998E9F229568790071F5FA /* CityCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CityCell.swift; sourceTree = "<group>"; };
 		A4C16558EC8C76C13B72F44C /* Pods-weatherapp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-weatherapp.release.xcconfig"; path = "Target Support Files/Pods-weatherapp/Pods-weatherapp.release.xcconfig"; sourceTree = "<group>"; };
+		B1116EB322959ED900FECC99 /* DailyCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyCell.swift; sourceTree = "<group>"; };
+		B1116EB52295A6BB00FECC99 /* ExtraTitleCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtraTitleCell.swift; sourceTree = "<group>"; };
+		B1116EB72295A94E00FECC99 /* ExtraCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtraCell.swift; sourceTree = "<group>"; };
 		B1933D02229537B700F6F397 /* CityViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CityViewController.swift; sourceTree = "<group>"; };
 		B1933D04229563B100F6F397 /* HourlyCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HourlyCell.swift; sourceTree = "<group>"; };
 		B1933D062295805A00F6F397 /* DailyTextCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyTextCell.swift; sourceTree = "<group>"; };
@@ -118,6 +124,9 @@
 				62998E6D229522300071F5FA /* ViewController.swift */,
 				62998E7F229529A00071F5FA /* WeatherDetails.swift */,
 				B1933D062295805A00F6F397 /* DailyTextCell.swift */,
+				B1116EB322959ED900FECC99 /* DailyCell.swift */,
+				B1116EB52295A6BB00FECC99 /* ExtraTitleCell.swift */,
+				B1116EB72295A94E00FECC99 /* ExtraCell.swift */,
 			);
 			path = weatherapp;
 			sourceTree = "<group>";
@@ -260,13 +269,16 @@
 				62998EA0229568790071F5FA /* CityCell.swift in Sources */,
 				62998E6E229522300071F5FA /* ViewController.swift in Sources */,
 				62998E9E229565740071F5FA /* Lists.swift in Sources */,
+				B1116EB62295A6BB00FECC99 /* ExtraTitleCell.swift in Sources */,
 				62998E6C2295222F0071F5FA /* AppDelegate.swift in Sources */,
 				B1933D072295805A00F6F397 /* DailyTextCell.swift in Sources */,
 				B1DF372122952A3B00A2884C /* City.swift in Sources */,
 				B1933D03229537B700F6F397 /* CityViewController.swift in Sources */,
+				B1116EB422959ED900FECC99 /* DailyCell.swift in Sources */,
 				B1933D05229563B100F6F397 /* HourlyCell.swift in Sources */,
 				62998E98229549AA0071F5FA /* HeaderCell.swift in Sources */,
 				62998E9A229553140071F5FA /* HourlyTextCell.swift in Sources */,
+				B1116EB82295A94E00FECC99 /* ExtraCell.swift in Sources */,
 				B1933D0A22958A9300F6F397 /* CitiesListViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

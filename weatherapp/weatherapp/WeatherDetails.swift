@@ -6,28 +6,6 @@
 //  Copyright © 2019 efrei. All rights reserved.
 //
 
-/*
- - L’icon du temps
- - La température
- - Le résumé (summary) actuel
- - La force du vent
- - La pression
- - L’humidité
- - l’indice UV
- - Le texte du hourly forecast
- - Le texte du daily forecast
- - Un tableau d’éléments contenant les informations heures par heures (hourly) suivantes:
-     - Le temps UNIX (nombre de secondes écoulées depuis le 1 janvier 1970)
-     - L’icon du temps
-     - L’humidité
-     - La température
- Un tableau d’éléments contenant les informations jour par jour suivantes (daily) suivantes:
-     - Le temps UNIX
-     - L’icon du temps
-     - La température minimum
-     - La température maximum
- */
-
 import Foundation
 
 struct WeatherDetails: Decodable {
@@ -122,25 +100,6 @@ struct WeatherDetails: Decodable {
                  uvIndex: 1,
                  visibility: 6.22,
                  ozone: 354.78
-             },
-             {
-                 time: 1558508400,
-                 summary: "Clear",
-                 icon: "clear-day",
-                 precipIntensity: 0,
-                 precipProbability: 0,
-                 temperature: 53.64,
-                 apparentTemperature: 53.64,
-                 dewPoint: 50.4,
-                 humidity: 0.89,
-                 pressure: 1020.7,
-                 windSpeed: 3.6,
-                 windGust: 6.08,
-                 windBearing: 35,
-                 cloudCover: 0.23,
-                 uvIndex: 1,
-                 visibility: 6.22,
-                 ozone: 351.38
              },
         ]
      },
