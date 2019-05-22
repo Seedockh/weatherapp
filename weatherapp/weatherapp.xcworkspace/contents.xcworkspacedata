@@ -2,9 +2,6 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "group:/Users/efrei/Desktop/weatherapp/weatherapp/weatherapp/CitiesListViewController.swift">
-   </FileRef>
-   <FileRef
       location = "group:weatherapp.xcodeproj">
    </FileRef>
    <FileRef
