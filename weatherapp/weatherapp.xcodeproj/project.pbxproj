@@ -14,9 +14,12 @@
 		62998E76229522300071F5FA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 62998E74229522300071F5FA /* LaunchScreen.storyboard */; };
 		62998E7E229524410071F5FA /* APIHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62998E7D229524410071F5FA /* APIHandler.swift */; };
 		62998E80229529A00071F5FA /* WeatherDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62998E7F229529A00071F5FA /* WeatherDetails.swift */; };
-		DCE8D2CA92274D1F387B7CA1 /* Pods_weatherapp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2A9CE5804BC59E7D76C7BEC3 /* Pods_weatherapp.framework */; };
+		62998E962295462C0071F5FA /* Icons in Resources */ = {isa = PBXBuildFile; fileRef = 62998E952295462C0071F5FA /* Icons */; };
+		62998E98229549AA0071F5FA /* HeaderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62998E97229549AA0071F5FA /* HeaderCell.swift */; };
+		62998E9A229553140071F5FA /* HourlyTextCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62998E99229553140071F5FA /* HourlyTextCell.swift */; };
 		B1933D03229537B700F6F397 /* CityViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1933D02229537B700F6F397 /* CityViewController.swift */; };
 		B1DF372122952A3B00A2884C /* City.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1DF372022952A3B00A2884C /* City.swift */; };
+		DCE8D2CA92274D1F387B7CA1 /* Pods_weatherapp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2A9CE5804BC59E7D76C7BEC3 /* Pods_weatherapp.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,6 +34,9 @@
 		62998E77229522300071F5FA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		62998E7D229524410071F5FA /* APIHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIHandler.swift; sourceTree = "<group>"; };
 		62998E7F229529A00071F5FA /* WeatherDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherDetails.swift; sourceTree = "<group>"; };
+		62998E952295462C0071F5FA /* Icons */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Icons; sourceTree = "<group>"; };
+		62998E97229549AA0071F5FA /* HeaderCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderCell.swift; sourceTree = "<group>"; };
+		62998E99229553140071F5FA /* HourlyTextCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HourlyTextCell.swift; sourceTree = "<group>"; };
 		A4C16558EC8C76C13B72F44C /* Pods-weatherapp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-weatherapp.release.xcconfig"; path = "Target Support Files/Pods-weatherapp/Pods-weatherapp.release.xcconfig"; sourceTree = "<group>"; };
 		B1933D02229537B700F6F397 /* CityViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CityViewController.swift; sourceTree = "<group>"; };
 		B1DF372022952A3B00A2884C /* City.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = City.swift; sourceTree = "<group>"; };
@@ -78,6 +84,7 @@
 		62998E6A2295222F0071F5FA /* weatherapp */ = {
 			isa = PBXGroup;
 			children = (
+				62998E952295462C0071F5FA /* Icons */,
 				B1DF372022952A3B00A2884C /* City.swift */,
 				62998E6B2295222F0071F5FA /* AppDelegate.swift */,
 				62998E6D229522300071F5FA /* ViewController.swift */,
@@ -88,6 +95,8 @@
 				62998E74229522300071F5FA /* LaunchScreen.storyboard */,
 				62998E77229522300071F5FA /* Info.plist */,
 				B1933D02229537B700F6F397 /* CityViewController.swift */,
+				62998E99229553140071F5FA /* HourlyTextCell.swift */,
+				62998E97229549AA0071F5FA /* HeaderCell.swift */,
 			);
 			path = weatherapp;
 			sourceTree = "<group>";
@@ -161,6 +170,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				62998E76229522300071F5FA /* LaunchScreen.storyboard in Resources */,
+				62998E962295462C0071F5FA /* Icons in Resources */,
 				62998E73229522300071F5FA /* Assets.xcassets in Resources */,
 				62998E71229522300071F5FA /* Main.storyboard in Resources */,
 			);
@@ -228,6 +238,8 @@
 				62998E6C2295222F0071F5FA /* AppDelegate.swift in Sources */,
 				B1DF372122952A3B00A2884C /* City.swift in Sources */,
 				B1933D03229537B700F6F397 /* CityViewController.swift in Sources */,
+				62998E98229549AA0071F5FA /* HeaderCell.swift in Sources */,
+				62998E9A229553140071F5FA /* HourlyTextCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

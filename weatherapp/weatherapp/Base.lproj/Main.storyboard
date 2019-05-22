@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="GmQ-pa-5MH">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="GmQ-pa-5MH">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -55,14 +55,57 @@
                                 <rect key="frame" x="0.0" y="64" width="375" height="603"/>
                                 <color key="backgroundColor" red="0.092279963195323944" green="0.26853504776954651" blue="0.53101807832717896" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="HeaderCell_ID" rowHeight="244" id="gsz-WX-NWj">
-                                        <rect key="frame" x="0.0" y="28" width="375" height="244"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="HeaderCell_ID" id="gsz-WX-NWj" customClass="HeaderCell" customModule="weatherapp" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="gsz-WX-NWj" id="smy-eL-9hX">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="243.5"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" ambiguous="YES" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="gsz-WX-NWj" id="smy-eL-9hX">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Z4N-4s-alZ">
+                                                    <rect key="frame" x="31" y="27" width="128" height="128"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="128" id="8VU-rC-JLf"/>
+                                                        <constraint firstAttribute="width" constant="128" id="RK6-ie-1wL"/>
+                                                    </constraints>
+                                                </imageView>
+                                            </subviews>
                                             <color key="backgroundColor" red="0.092279963195323944" green="0.26853504776954651" blue="0.53101807832717896" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <constraints>
+                                                <constraint firstAttribute="bottomMargin" secondItem="Z4N-4s-alZ" secondAttribute="bottom" constant="64" id="7AH-aq-vKm"/>
+                                                <constraint firstItem="Z4N-4s-alZ" firstAttribute="leading" secondItem="smy-eL-9hX" secondAttribute="leadingMargin" constant="16" id="Ynh-9h-2Ic"/>
+                                                <constraint firstItem="Z4N-4s-alZ" firstAttribute="top" secondItem="smy-eL-9hX" secondAttribute="topMargin" constant="16" id="zgi-2v-0ZC"/>
+                                            </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="weatherIcon" destination="Z4N-4s-alZ" id="5nM-xq-b8w"/>
+                                        </connections>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="HourlyTextCell_ID" id="8Vj-20-mvj" customClass="HourlyTextCell" customModule="weatherapp" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="72" width="375" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="8Vj-20-mvj" id="u9Y-lo-5RD">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Mus-hM-SME">
+                                                    <rect key="frame" x="31" y="19" width="313" height="6"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="Mus-hM-SME" firstAttribute="top" secondItem="u9Y-lo-5RD" secondAttribute="topMargin" constant="8" id="2og-9J-eL0"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="Mus-hM-SME" secondAttribute="trailing" constant="16" id="VeU-I3-kTx"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="Mus-hM-SME" secondAttribute="bottom" constant="8" id="fVj-bq-6EV"/>
+                                                <constraint firstItem="Mus-hM-SME" firstAttribute="leading" secondItem="u9Y-lo-5RD" secondAttribute="leadingMargin" constant="16" id="iQp-3J-cVt"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <color key="backgroundColor" red="0.092279963199999995" green="0.26853504779999998" blue="0.53101807830000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <connections>
+                                            <outlet property="hourlyText" destination="Mus-hM-SME" id="eTN-PK-GAx"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
@@ -76,6 +119,9 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="2X4-6T-xs5"/>
                     </view>
+                    <connections>
+                        <outlet property="tableView" destination="QjC-5v-VbB" id="Fd7-HP-aoA"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FIX-8J-Sjd" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
