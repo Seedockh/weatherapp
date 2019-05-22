@@ -11,9 +11,9 @@ import UIKit
 class HourlyTextCell: UITableViewCell {
 
     @IBOutlet weak var hourlyText: UILabel!
-    
+
     func configure(withWeatherDetails weatherDetails: WeatherDetails?) {
         hourlyText.text = weatherDetails?.hourly.summary
     }
-    
+
 }

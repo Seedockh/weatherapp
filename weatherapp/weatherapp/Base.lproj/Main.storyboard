@@ -33,6 +33,13 @@
                     </view>
                     <navigationItem key="navigationItem" id="nyl-La-nhF">
                         <barButtonItem key="backBarButtonItem" title="Back" id="uU6-Q0-vNh"/>
+                        <barButtonItem key="rightBarButtonItem" title="Cities" image="icons8-menu-50.png" style="plain" id="fBV-1D-0In">
+                            <inset key="largeContentSizeImageInsets" minX="-1" minY="0.0" maxX="0.0" maxY="0.0"/>
+                            <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <connections>
+                                <segue destination="Xub-nm-M2k" kind="show" id="QJx-4H-IBN"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="mapView" destination="Z8K-kQ-F2V" id="NNV-t8-fKV"/>
@@ -249,6 +256,75 @@
             </objects>
             <point key="canvasLocation" x="-295" y="24"/>
         </scene>
+        <!--Cities-->
+        <scene sceneID="oI0-L6-GiE">
+            <objects>
+                <viewController id="Xub-nm-M2k" customClass="CitiesListViewController" customModule="weatherapp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="mw5-ME-pj9">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="56S-5h-oe4">
+                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="CityCell" id="Wbu-Bi-Fwk" customClass="CityCell" customModule="weatherapp" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Wbu-Bi-Fwk" id="nNf-Pv-qKI">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hSS-xe-Vnu">
+                                                    <rect key="frame" x="15" y="19" width="345" height="6"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="hSS-xe-Vnu" firstAttribute="trailing" secondItem="nNf-Pv-qKI" secondAttribute="trailingMargin" id="AGf-M5-ktH"/>
+                                                <constraint firstItem="hSS-xe-Vnu" firstAttribute="centerX" secondItem="nNf-Pv-qKI" secondAttribute="centerX" id="Hkd-22-c6a"/>
+                                                <constraint firstItem="hSS-xe-Vnu" firstAttribute="leading" secondItem="nNf-Pv-qKI" secondAttribute="leadingMargin" id="L25-vG-Rzo"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="hSS-xe-Vnu" secondAttribute="bottom" constant="8" id="ef4-Rh-wT9"/>
+                                                <constraint firstItem="hSS-xe-Vnu" firstAttribute="top" secondItem="nNf-Pv-qKI" secondAttribute="topMargin" constant="8" id="gXf-jq-46W"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="nameLabel" destination="hSS-xe-Vnu" id="TSV-tC-Hh2"/>
+                                            <segue destination="Iga-VH-cxX" kind="show" identifier="CityListSegue" id="qp5-XR-PEg"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="Xub-nm-M2k" id="z3K-tc-snk"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="fBX-ma-ht5" firstAttribute="trailing" secondItem="56S-5h-oe4" secondAttribute="trailing" id="2vD-eY-Hdv"/>
+                            <constraint firstItem="56S-5h-oe4" firstAttribute="top" secondItem="fBX-ma-ht5" secondAttribute="top" id="MVx-Nh-qaW"/>
+                            <constraint firstItem="56S-5h-oe4" firstAttribute="leading" secondItem="fBX-ma-ht5" secondAttribute="leading" id="fSY-m9-7aS"/>
+                            <constraint firstItem="fBX-ma-ht5" firstAttribute="bottom" secondItem="56S-5h-oe4" secondAttribute="bottom" id="gkA-pH-K7K"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="fBX-ma-ht5"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Cities" id="zHR-JH-9WW"/>
+                    <connections>
+                        <outlet property="tableView" destination="56S-5h-oe4" id="ves-In-hpT"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="GsC-9m-TbX" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="518" y="732"/>
+        </scene>
     </scenes>
+    <resources>
+        <image name="icons8-menu-50.png" width="50" height="50"/>
+    </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="VLA-Af-JkR"/>
+    </inferredMetricsTieBreakers>
     <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
 </document>
