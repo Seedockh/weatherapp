@@ -31,7 +31,9 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="5f5-h1-m0F"/>
                     </view>
-                    <navigationItem key="navigationItem" id="nyl-La-nhF"/>
+                    <navigationItem key="navigationItem" id="nyl-La-nhF">
+                        <barButtonItem key="backBarButtonItem" title="Back" id="uU6-Q0-vNh"/>
+                    </navigationItem>
                     <connections>
                         <outlet property="mapView" destination="Z8K-kQ-F2V" id="NNV-t8-fKV"/>
                         <segue destination="Iga-VH-cxX" kind="show" identifier="CitySegue_ID" id="VLA-Af-JkR"/>
@@ -48,7 +50,7 @@
                     <view key="view" contentMode="scaleToFill" id="chv-Gk-x5j">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" red="0.092279963195323944" green="0.26853504776954651" blue="0.53101807832717896" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="2X4-6T-xs5"/>
                     </view>
                 </viewController>
@@ -63,6 +65,7 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="r1s-h7-Scy">
                         <rect key="frame" x="0.0" y="20" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" red="1" green="0.84254951721728011" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </navigationBar>
                     <connections>
                         <segue destination="3JH-S0-ewE" kind="relationship" relationship="rootViewController" id="ZvY-t3-ze9"/>
@@ -73,4 +76,5 @@
             <point key="canvasLocation" x="-295" y="24"/>
         </scene>
     </scenes>
+    <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
 </document>

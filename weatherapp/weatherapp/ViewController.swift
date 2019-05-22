@@ -37,6 +37,7 @@ class ViewController: UIViewController, MKMapViewDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        title = "WeatherApp"
         mapView.delegate = self
         for city in cityList {
             let pin = MKPointAnnotation()
