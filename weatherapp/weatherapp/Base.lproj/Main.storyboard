@@ -58,7 +58,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="QjC-5v-VbB">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="QjC-5v-VbB">
                                 <rect key="frame" x="0.0" y="64" width="375" height="603"/>
                                 <color key="backgroundColor" red="0.092279963195323944" green="0.26853504776954651" blue="0.53101807832717896" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <prototypes>
@@ -100,6 +100,7 @@
                                                 <constraint firstItem="Z4N-4s-alZ" firstAttribute="top" secondItem="smy-eL-9hX" secondAttribute="topMargin" constant="16" id="zgi-2v-0ZC"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <inset key="separatorInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                         <connections>
                                             <outlet property="currentSum" destination="uWJ-V2-wEW" id="xDH-bO-C7A"/>
                                             <outlet property="currentTemp" destination="8eP-rc-3H3" id="saJ-DV-5a0"/>
@@ -186,6 +187,7 @@
                                                 <constraint firstAttribute="trailingMargin" secondItem="LWo-Fe-Z13" secondAttribute="trailing" id="zgW-Rm-n4Q"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <inset key="separatorInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                         <connections>
                                             <outlet property="hour" destination="qrt-aW-kfu" id="9gh-m1-yQb"/>
                                             <outlet property="humidity" destination="LZM-X9-xZt" id="QFr-rv-q1p"/>
@@ -215,6 +217,7 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" red="0.092279963195323944" green="0.26853504776954651" blue="0.53101807832717896" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <inset key="separatorInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                         <connections>
                                             <outlet property="dailyText" destination="OeN-QF-m5E" id="ubL-A4-eAC"/>
                                         </connections>
@@ -321,7 +324,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="icons8-menu-50.png" width="50" height="50"/>
+        <image name="icons8-menu-50.png" width="37.5" height="37.5"/>
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="VLA-Af-JkR"/>
