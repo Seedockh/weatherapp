@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="GmQ-pa-5MH">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="GmQ-pa-5MH">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -33,13 +33,17 @@
                     </view>
                     <navigationItem key="navigationItem" id="nyl-La-nhF">
                         <barButtonItem key="backBarButtonItem" title="Back" id="uU6-Q0-vNh"/>
-                        <barButtonItem key="rightBarButtonItem" title="Cities" image="icons8-menu-50.png" style="plain" id="fBV-1D-0In">
-                            <inset key="largeContentSizeImageInsets" minX="-1" minY="0.0" maxX="0.0" maxY="0.0"/>
+                        <barButtonItem key="rightBarButtonItem" image="icons8-menu-50.png" style="plain" id="fBV-1D-0In">
+                            <inset key="imageInsets" minX="5" minY="3" maxX="-13" maxY="-4"/>
+                            <inset key="largeContentSizeImageInsets" minX="-1" minY="0.0" maxX="0.0" maxY="1"/>
                             <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <connections>
                                 <segue destination="Xub-nm-M2k" kind="show" id="QJx-4H-IBN"/>
                             </connections>
                         </barButtonItem>
+                        <connections>
+                            <outlet property="rightBarButtonItem" destination="fBV-1D-0In" id="c0o-FS-gBE"/>
+                        </connections>
                     </navigationItem>
                     <connections>
                         <outlet property="mapView" destination="Z8K-kQ-F2V" id="NNV-t8-fKV"/>
@@ -324,7 +328,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="icons8-menu-50.png" width="37.5" height="37.5"/>
+        <image name="icons8-menu-50.png" width="50" height="50"/>
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="VLA-Af-JkR"/>
