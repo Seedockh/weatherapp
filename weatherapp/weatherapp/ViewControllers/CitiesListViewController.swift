@@ -22,8 +22,7 @@ class CitiesListViewController: UIViewController, UITableViewDataSource {
                 locationManager = CLLocationManager()
                 locationManager.delegate = self as? CLLocationManagerDelegate
                 locationManager.desiredAccuracy = kCLLocationAccuracyNearestTenMeters
-                locationManager.requestAlwaysAuthorization()
-                locationManager.startUpdatingLocation()
+                
                 
                 let userLoc: CLLocation = CLLocation(
                     latitude: locationManager.location!.coordinate.latitude,
@@ -50,6 +49,8 @@ class CitiesListViewController: UIViewController, UITableViewDataSource {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        locationManager.requestAlwaysAuthorization()
+        locationManager.startUpdatingLocation()
         cities.sort { $0.name < $1.name }
         tableView.dataSource = self
         title = "Cities"
