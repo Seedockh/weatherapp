@@ -23,18 +23,23 @@ class CitiesListViewController: UIViewController, UITableViewDataSource {
                 locationManager.delegate = self as? CLLocationManagerDelegate
                 locationManager.desiredAccuracy = kCLLocationAccuracyNearestTenMeters
                 
-                
-                let userLoc: CLLocation = CLLocation(
-                    latitude: locationManager.location!.coordinate.latitude,
-                    longitude: locationManager.location!.coordinate.longitude
-                )
-                cities.sort {
-                    userLoc.distance(from: CLLocation(
-                        latitude: $0.coordinates.latitude,
-                        longitude: $0.coordinates.longitude )) <
-                        userLoc.distance(from: CLLocation(
-                            latitude: $1.coordinates.latitude,
-                            longitude: $1.coordinates.longitude ))
+                if CLLocationManager.authorizationStatus().rawValue == 3 { // If location is authorized
+                    if let userLoc = locationManager.location {
+                        let userCoords: CLLocation = CLLocation(
+                            latitude: userLoc.coordinate.latitude,
+                            longitude: userLoc.coordinate.longitude
+                        )
+                        cities.sort {
+                            userCoords.distance(from: CLLocation(
+                                latitude: $0.coordinates.latitude,
+                                longitude: $0.coordinates.longitude )) <
+                                userCoords.distance(from: CLLocation(
+                                    latitude: $1.coordinates.latitude,
+                                    longitude: $1.coordinates.longitude ))
+                        }
+                    }
+                } else {
+                    cities.sort { $0.name < $1.name }
                 }
                 self.tableView.reloadData()
             }
