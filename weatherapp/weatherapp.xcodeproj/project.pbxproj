@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		622050A42296D0270027BCED /* SpinnerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 622050A32296D0270027BCED /* SpinnerViewController.swift */; };
 		62865DFE22959012008AC309 /* icons8-menu-50.png in Resources */ = {isa = PBXBuildFile; fileRef = 62865DF222959011008AC309 /* icons8-menu-50.png */; };
 		62865DFF22959012008AC309 /* icons8-delete-50.png in Resources */ = {isa = PBXBuildFile; fileRef = 62865DF322959011008AC309 /* icons8-delete-50.png */; };
 		62998E6C2295222F0071F5FA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62998E6B2295222F0071F5FA /* AppDelegate.swift */; };
@@ -34,6 +35,7 @@
 /* Begin PBXFileReference section */
 		0A0271E6F3DA9C0AD8D77C3A /* Pods-weatherapp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-weatherapp.debug.xcconfig"; path = "Target Support Files/Pods-weatherapp/Pods-weatherapp.debug.xcconfig"; sourceTree = "<group>"; };
 		2A9CE5804BC59E7D76C7BEC3 /* Pods_weatherapp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_weatherapp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		622050A32296D0270027BCED /* SpinnerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpinnerViewController.swift; sourceTree = "<group>"; };
 		62865DF222959011008AC309 /* icons8-menu-50.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "icons8-menu-50.png"; path = "Icons/icons8-menu-50.png"; sourceTree = "<group>"; };
 		62865DF322959011008AC309 /* icons8-delete-50.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "icons8-delete-50.png"; path = "Icons/icons8-delete-50.png"; sourceTree = "<group>"; };
 		62998E682295222F0071F5FA /* weatherapp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = weatherapp.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -127,6 +129,7 @@
 				B1933D02229537B700F6F397 /* CityViewController.swift */,
 				62998E6D229522300071F5FA /* ViewController.swift */,
 				B1933D0922958A9300F6F397 /* CitiesListViewController.swift */,
+				622050A32296D0270027BCED /* SpinnerViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -283,6 +286,7 @@
 				62998E80229529A00071F5FA /* WeatherDetails.swift in Sources */,
 				62998EA0229568790071F5FA /* CityCell.swift in Sources */,
 				62998E6E229522300071F5FA /* ViewController.swift in Sources */,
+				622050A42296D0270027BCED /* SpinnerViewController.swift in Sources */,
 				62998E9E229565740071F5FA /* Lists.swift in Sources */,
 				62998E6C2295222F0071F5FA /* AppDelegate.swift in Sources */,
 				B1DF372122952A3B00A2884C /* City.swift in Sources */,

@@ -34,9 +34,18 @@ class CityViewController: UIViewController, UITableViewDataSource {
     }
     
     func getForecastWeather() {
+        let child = SpinnerViewController()
+        // add the spinner view controller
+        addChild(child)
+        child.view.frame = view.frame
+        view.addSubview(child.view)
+        child.didMove(toParent: self)
         APIHandler.requestForecastWeather(latitude: city.coordinate.latitude, longitude: city.coordinate.longitude, success: { (data) in
             let decoder = JSONDecoder()
             self.weatherDetails = try? decoder.decode(WeatherDetails.self, from: data)
+            child.willMove(toParent: nil)
+            child.view.removeFromSuperview()
+            child.removeFromParent()
             self.tableView.reloadData()
         }) { (error) in
             print(error)
