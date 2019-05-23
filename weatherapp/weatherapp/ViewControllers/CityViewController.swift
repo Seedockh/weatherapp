@@ -80,36 +80,46 @@ class CityViewController: UIViewController, UITableViewDataSource {
             case .header:
                 if let cell = tableView.dequeueReusableCell(withIdentifier: "HeaderCell_ID", for: indexPath) as? HeaderCell {
                     cell.configure(withWeatherDetails: weatherDetails)
+                    cell.backgroundColor = UIColor.clear
+                    let imageView = UIImageView(image: UIImage(named: "./Images/\(weatherDetails?.currently.icon ?? "").jpg"))
+                    imageView.alpha = 0.6
+                    tableView.backgroundView = imageView
                     return cell
                 }
             case .hourlyText:
                 if let cell = tableView.dequeueReusableCell(withIdentifier: "HourlyTextCell_ID", for: indexPath) as? TitleCell {
                     cell.configure(withWeatherDetails: weatherDetails, sender: "HourlyText")
+                    cell.backgroundColor = UIColor.clear
                     return cell
                 }
             case .hourly:
                 if let cell = tableView.dequeueReusableCell(withIdentifier: "HourlyCell_ID", for: indexPath) as? HourlyCell {
                     cell.configure(withWeatherDetails: weatherDetails, index: indexPath.item)
+                    cell.backgroundColor = UIColor.clear
                     return cell
                 }
             case .dailyText:
                 if let cell = tableView.dequeueReusableCell(withIdentifier: "DailyTextCell_ID", for: indexPath) as? TitleCell {
                     cell.configure(withWeatherDetails: weatherDetails, sender: "DailyText")
+                    cell.backgroundColor = UIColor.clear
                     return cell
                 }
             case .daily:
                 if let cell = tableView.dequeueReusableCell(withIdentifier: "DailyCell_ID", for: indexPath) as? DailyCell {
                     cell.configure(withWeatherDetails: weatherDetails, index: indexPath.item)
+                    cell.backgroundColor = UIColor.clear
                     return cell
                 }
             case .extraTitle:
                 if let cell = tableView.dequeueReusableCell(withIdentifier: "ExtraTitleCell_ID", for: indexPath) as? TitleCell {
                     cell.configure(withWeatherDetails: weatherDetails, sender: "ExtraTitle")
+                    cell.backgroundColor = UIColor.clear
                     return cell
                 }
             case .extra:
                 if let cell = tableView.dequeueReusableCell(withIdentifier: "ExtraCell_ID", for: indexPath) as? ExtraCell {
                     cell.configure(withWeatherDetails: weatherDetails, index: indexPath.item)
+                    cell.backgroundColor = UIColor.clear
                     return cell
                 }
         }
