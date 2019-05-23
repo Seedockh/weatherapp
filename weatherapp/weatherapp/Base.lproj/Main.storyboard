@@ -5,7 +5,7 @@
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -22,7 +22,7 @@
                                 <rect key="frame" x="0.0" y="88" width="414" height="774"/>
                             </mapView>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" red="1" green="0.84254951720000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="5f5-h1-m0F" firstAttribute="bottom" secondItem="Z8K-kQ-F2V" secondAttribute="bottom" id="Fvc-xh-tay"/>
                             <constraint firstItem="5f5-h1-m0F" firstAttribute="trailing" secondItem="Z8K-kQ-F2V" secondAttribute="trailing" id="UIm-05-zH7"/>
@@ -423,7 +423,8 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="bJQ-kw-KOe">
-                                <rect key="frame" x="0.0" y="834" width="414" height="29"/>
+                                <rect key="frame" x="-4" y="834" width="422" height="29"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <segments>
                                     <segment title="A - Z"/>
                                     <segment title="Geographic"/>
@@ -469,14 +470,14 @@
                                 </connections>
                             </tableView>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" red="1" green="0.84254951720000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="56S-5h-oe4" firstAttribute="top" secondItem="fBX-ma-ht5" secondAttribute="top" id="3N8-fO-l9X"/>
                             <constraint firstItem="bJQ-kw-KOe" firstAttribute="top" secondItem="56S-5h-oe4" secondAttribute="bottom" id="7Z6-B8-qTQ"/>
                             <constraint firstItem="fBX-ma-ht5" firstAttribute="bottom" secondItem="bJQ-kw-KOe" secondAttribute="bottom" id="84k-Lc-Nv4"/>
                             <constraint firstItem="56S-5h-oe4" firstAttribute="leading" secondItem="fBX-ma-ht5" secondAttribute="leading" id="HXP-zq-1bB"/>
-                            <constraint firstItem="bJQ-kw-KOe" firstAttribute="leading" secondItem="fBX-ma-ht5" secondAttribute="leading" id="KDw-L2-UHb"/>
-                            <constraint firstItem="fBX-ma-ht5" firstAttribute="trailing" secondItem="bJQ-kw-KOe" secondAttribute="trailing" id="eWW-3n-MH2"/>
+                            <constraint firstItem="bJQ-kw-KOe" firstAttribute="leading" secondItem="fBX-ma-ht5" secondAttribute="leading" constant="-4" id="KDw-L2-UHb"/>
+                            <constraint firstItem="fBX-ma-ht5" firstAttribute="trailing" secondItem="bJQ-kw-KOe" secondAttribute="trailing" constant="-4" id="eWW-3n-MH2"/>
                             <constraint firstItem="56S-5h-oe4" firstAttribute="trailing" secondItem="fBX-ma-ht5" secondAttribute="trailing" id="nnY-6f-vDL"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="fBX-ma-ht5"/>
@@ -492,7 +493,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="icons8-menu-50.png" width="50" height="50"/>
+        <image name="icons8-menu-50.png" width="37.5" height="37.5"/>
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="qp5-XR-PEg"/>
