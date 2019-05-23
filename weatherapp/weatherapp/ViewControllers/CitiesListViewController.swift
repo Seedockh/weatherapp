@@ -12,6 +12,9 @@ import CoreLocation
 class CitiesListViewController: UIViewController, UITableViewDataSource {
     
     @IBOutlet weak var tableView: UITableView!
+    @IBAction func switchSort() {
+        print(">>> Switch sort")
+    }
     
     var cities = Lists.cities
     

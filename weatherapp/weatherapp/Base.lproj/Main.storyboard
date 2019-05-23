@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="GmQ-pa-5MH">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="GmQ-pa-5MH">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -423,8 +423,18 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="bJQ-kw-KOe">
+                                <rect key="frame" x="0.0" y="639" width="375" height="29"/>
+                                <segments>
+                                    <segment title="A - Z"/>
+                                    <segment title="Geographic"/>
+                                </segments>
+                                <connections>
+                                    <action selector="switchSort" destination="Xub-nm-M2k" eventType="valueChanged" id="cnb-JF-wFB"/>
+                                </connections>
+                            </segmentedControl>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="56S-5h-oe4">
-                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                                <rect key="frame" x="0.0" y="64" width="375" height="575"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="CityCell" id="Wbu-Bi-Fwk" customClass="CityCell" customModule="weatherapp" customModuleProvider="target">
@@ -462,10 +472,13 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="fBX-ma-ht5" firstAttribute="trailing" secondItem="56S-5h-oe4" secondAttribute="trailing" id="2vD-eY-Hdv"/>
-                            <constraint firstItem="56S-5h-oe4" firstAttribute="top" secondItem="fBX-ma-ht5" secondAttribute="top" id="MVx-Nh-qaW"/>
-                            <constraint firstItem="56S-5h-oe4" firstAttribute="leading" secondItem="fBX-ma-ht5" secondAttribute="leading" id="fSY-m9-7aS"/>
-                            <constraint firstItem="fBX-ma-ht5" firstAttribute="bottom" secondItem="56S-5h-oe4" secondAttribute="bottom" id="gkA-pH-K7K"/>
+                            <constraint firstItem="56S-5h-oe4" firstAttribute="top" secondItem="fBX-ma-ht5" secondAttribute="top" id="3N8-fO-l9X"/>
+                            <constraint firstItem="bJQ-kw-KOe" firstAttribute="top" secondItem="56S-5h-oe4" secondAttribute="bottom" id="7Z6-B8-qTQ"/>
+                            <constraint firstItem="fBX-ma-ht5" firstAttribute="bottom" secondItem="bJQ-kw-KOe" secondAttribute="bottom" id="84k-Lc-Nv4"/>
+                            <constraint firstItem="56S-5h-oe4" firstAttribute="leading" secondItem="fBX-ma-ht5" secondAttribute="leading" id="HXP-zq-1bB"/>
+                            <constraint firstItem="bJQ-kw-KOe" firstAttribute="leading" secondItem="fBX-ma-ht5" secondAttribute="leading" id="KDw-L2-UHb"/>
+                            <constraint firstItem="fBX-ma-ht5" firstAttribute="trailing" secondItem="bJQ-kw-KOe" secondAttribute="trailing" id="eWW-3n-MH2"/>
+                            <constraint firstItem="56S-5h-oe4" firstAttribute="trailing" secondItem="fBX-ma-ht5" secondAttribute="trailing" id="nnY-6f-vDL"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="fBX-ma-ht5"/>
                     </view>
@@ -476,11 +489,11 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="GsC-9m-TbX" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="518" y="732"/>
+            <point key="canvasLocation" x="517.60000000000002" y="731.78410794602701"/>
         </scene>
     </scenes>
     <resources>
-        <image name="icons8-menu-50.png" width="37.5" height="37.5"/>
+        <image name="icons8-menu-50.png" width="50" height="50"/>
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="qp5-XR-PEg"/>
