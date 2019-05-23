@@ -12,6 +12,13 @@ import CoreLocation
 class CitiesListViewController: UIViewController, UITableViewDataSource {
     
     @IBOutlet weak var tableView: UITableView!
+    @IBAction func closeView(_ sender: Any) {
+        UIView.animate(withDuration: 0.1, delay: 0, usingSpringWithDamping: 0.5, initialSpringVelocity: 5, options: [], animations: {
+            self.navigationItem.leftBarButtonItem?.customView?.transform = CGAffineTransform(rotationAngle: .pi)
+        }, completion: { (finished) in
+            _ = self.navigationController?.popViewController(animated: true)
+        })
+    }
     @IBAction func switchSort(sender: UISegmentedControl) {  // Sorts cities by distance
         switch sender.selectedSegmentIndex {
         case 0:

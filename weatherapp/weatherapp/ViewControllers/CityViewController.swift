@@ -12,7 +12,7 @@ import MapKit
 class CityViewController: UIViewController, UITableViewDataSource {
 
     @IBOutlet weak var tableView: UITableView!
-
+    
     var city: MKPointAnnotation!
     var weatherDetails : WeatherDetails?
     

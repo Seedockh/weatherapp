@@ -32,17 +32,20 @@
                         <viewLayoutGuide key="safeArea" id="5f5-h1-m0F"/>
                     </view>
                     <navigationItem key="navigationItem" id="nyl-La-nhF">
-                        <barButtonItem key="backBarButtonItem" title="Back" id="uU6-Q0-vNh"/>
-                        <barButtonItem key="rightBarButtonItem" image="icons8-menu-50.png" style="done" id="fBV-1D-0In">
-                            <inset key="imageInsets" minX="5" minY="3" maxX="-13" maxY="-4"/>
-                            <inset key="largeContentSizeImageInsets" minX="-1" minY="0.0" maxX="0.0" maxY="1"/>
-                            <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                            <connections>
-                                <segue destination="Xub-nm-M2k" kind="show" id="QJx-4H-IBN"/>
-                            </connections>
+                        <barButtonItem key="leftBarButtonItem" style="plain" id="jmf-tC-1HM">
+                            <button key="customView" opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="BXa-3r-wAW">
+                                <rect key="frame" x="20" y="0.0" width="0.0" height="0.0"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxX="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                <inset key="contentEdgeInsets" minX="0.0" minY="3" maxX="11" maxY="4"/>
+                                <inset key="imageEdgeInsets" minX="3" minY="2" maxX="17" maxY="0.0"/>
+                                <state key="normal" image="icons8-menu-50.png"/>
+                                <connections>
+                                    <action selector="rotateAction:" destination="3JH-S0-ewE" eventType="touchUpInside" id="4lg-9t-S7W"/>
+                                </connections>
+                            </button>
                         </barButtonItem>
                         <connections>
-                            <outlet property="rightBarButtonItem" destination="fBV-1D-0In" id="c0o-FS-gBE"/>
+                            <outlet property="titleView" destination="BXa-3r-wAW" id="e4L-cb-Pw8"/>
                         </connections>
                     </navigationItem>
                     <connections>
@@ -439,7 +442,7 @@
         <!--Cities-->
         <scene sceneID="oI0-L6-GiE">
             <objects>
-                <viewController id="Xub-nm-M2k" customClass="CitiesListViewController" customModule="weatherapp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="CitiesList" id="Xub-nm-M2k" customClass="CitiesListViewController" customModule="weatherapp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="mw5-ME-pj9">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -456,7 +459,7 @@
                                 </connections>
                             </segmentedControl>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="56S-5h-oe4">
-                                <rect key="frame" x="0.0" y="88" width="414" height="746"/>
+                                <rect key="frame" x="0.0" y="44" width="414" height="790"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="CityCell" id="Wbu-Bi-Fwk" customClass="CityCell" customModule="weatherapp" customModuleProvider="target">
@@ -514,7 +517,20 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="fBX-ma-ht5"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Cities" id="zHR-JH-9WW"/>
+                    <navigationItem key="navigationItem" title="Cities" id="zHR-JH-9WW">
+                        <barButtonItem key="leftBarButtonItem" style="plain" id="BlL-AF-HmT">
+                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="wCu-kp-pyK">
+                                <rect key="frame" x="20" y="0.0" width="42" height="44"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <inset key="contentEdgeInsets" minX="-3" minY="17" maxX="0.0" maxY="3"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="23" maxY="0.0"/>
+                                <state key="normal" image="icons8-delete-50.png"/>
+                                <connections>
+                                    <action selector="closeView:" destination="Xub-nm-M2k" eventType="touchUpInside" id="dcw-HJ-qdy"/>
+                                </connections>
+                            </button>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="tableView" destination="56S-5h-oe4" id="ves-In-hpT"/>
                     </connections>
@@ -525,6 +541,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="icons8-delete-50.png" width="50" height="50"/>
         <image name="icons8-menu-50.png" width="50" height="50"/>
     </resources>
     <inferredMetricsTieBreakers>
