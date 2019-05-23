@@ -12,16 +12,53 @@ import CoreLocation
 class CitiesListViewController: UIViewController, UITableViewDataSource {
     
     @IBOutlet weak var tableView: UITableView!
-    @IBAction func switchSort() {
-        print(">>> Switch sort")
+    @IBAction func switchSort(sender: UISegmentedControl) {  // Sorts cities by distance
+        switch sender.selectedSegmentIndex {
+        case 0:
+            cities.sort { $0.name < $1.name }
+            self.tableView.reloadData()
+        case 1:
+            if CLLocationManager.locationServicesEnabled() {
+                locationManager = CLLocationManager()
+                locationManager.delegate = self as? CLLocationManagerDelegate
+                locationManager.desiredAccuracy = kCLLocationAccuracyNearestTenMeters
+                locationManager.requestAlwaysAuthorization()
+                locationManager.startUpdatingLocation()
+                
+                let userLoc: CLLocation = CLLocation(
+                    latitude: locationManager.location!.coordinate.latitude,
+                    longitude: locationManager.location!.coordinate.longitude
+                )
+                cities.sort {
+                    userLoc.distance(from: CLLocation(
+                        latitude: $0.coordinates.latitude,
+                        longitude: $0.coordinates.longitude )) <
+                        userLoc.distance(from: CLLocation(
+                            latitude: $1.coordinates.latitude,
+                            longitude: $1.coordinates.longitude ))
+                }
+                self.tableView.reloadData()
+            }
+
+        default:
+            break
+        }
     }
     
+    var locationManager = CLLocationManager()
     var cities = Lists.cities
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        cities.sort { $0.name < $1.name }
         tableView.dataSource = self
         title = "Cities"
+    }
+    
+    func locationManager(manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+        let location = locations.last! as CLLocation
+        print("Location : \(location)")
+        //self.map.setRegion(region, animated: true)
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
