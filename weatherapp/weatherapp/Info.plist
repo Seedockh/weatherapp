@@ -42,6 +42,8 @@
 		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
 	<key>NSLocationAlwaysAndWhenInUseUsageDescription</key>
-	<string>Get the distances from cities</string>
+	<string>Gets your distance from cities</string>
+	<key>NSLocationWhenInUseUsageDescription</key>
+	<string>Gets your distance from cities</string>
 </dict>
 </plist>
