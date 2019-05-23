@@ -111,7 +111,7 @@
                                             <outlet property="weatherIcon" destination="Z4N-4s-alZ" id="5nM-xq-b8w"/>
                                         </connections>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="HourlyTextCell_ID" id="8Vj-20-mvj" customClass="HourlyTextCell" customModule="weatherapp" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="HourlyTextCell_ID" id="8Vj-20-mvj" customClass="TitleCell" customModule="weatherapp" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="72" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="8Vj-20-mvj" id="u9Y-lo-5RD">
@@ -135,7 +135,7 @@
                                         <color key="backgroundColor" red="0.092279963199999995" green="0.26853504779999998" blue="0.53101807830000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <inset key="separatorInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                         <connections>
-                                            <outlet property="hourlyText" destination="Mus-hM-SME" id="eTN-PK-GAx"/>
+                                            <outlet property="TextLabel" destination="Mus-hM-SME" id="Wic-dU-tFT"/>
                                         </connections>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="HourlyCell_ID" id="K1M-d0-5cw" customClass="HourlyCell" customModule="weatherapp" customModuleProvider="target">
@@ -199,7 +199,7 @@
                                             <outlet property="weatherIcon" destination="qZs-Kh-jDb" id="jyx-Wj-TBB"/>
                                         </connections>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="DailyTextCell_ID" id="PNZ-v6-a5D" customClass="DailyTextCell" customModule="weatherapp" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="DailyTextCell_ID" id="PNZ-v6-a5D" customClass="TitleCell" customModule="weatherapp" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="160" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="PNZ-v6-a5D" id="2aY-bn-Tjx">
@@ -223,7 +223,7 @@
                                         <color key="backgroundColor" red="0.092279963195323944" green="0.26853504776954651" blue="0.53101807832717896" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <inset key="separatorInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                         <connections>
-                                            <outlet property="dailyText" destination="OeN-QF-m5E" id="ubL-A4-eAC"/>
+                                            <outlet property="TextLabel" destination="OeN-QF-m5E" id="rfn-Lz-6xV"/>
                                         </connections>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="DailyCell_ID" id="vso-An-vma" customClass="DailyCell" customModule="weatherapp" customModuleProvider="target">
@@ -292,7 +292,7 @@
                                             <outlet property="weatherIcon" destination="fLy-bL-Ok2" id="aea-1d-qAA"/>
                                         </connections>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="ExtraTitleCell_ID" id="hqO-j4-6Tf" customClass="ExtraTitleCell" customModule="weatherapp" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="ExtraTitleCell_ID" id="hqO-j4-6Tf" customClass="TitleCell" customModule="weatherapp" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="248" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" ambiguous="YES" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="hqO-j4-6Tf" id="qdf-vJ-yEV">
@@ -315,7 +315,7 @@
                                         <color key="backgroundColor" red="0.092279963195323944" green="0.26853504776954651" blue="0.53101807832717896" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <inset key="separatorInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                         <connections>
-                                            <outlet property="title" destination="nrI-Fh-l7E" id="VSB-Uq-QM2"/>
+                                            <outlet property="TextLabel" destination="nrI-Fh-l7E" id="E16-m9-9Hv"/>
                                         </connections>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="ExtraCell_ID" rowHeight="138" id="tMn-dd-od7" customClass="ExtraCell" customModule="weatherapp" customModuleProvider="target">

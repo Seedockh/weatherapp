@@ -34,9 +34,7 @@ class CitiesListViewController: UIViewController, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) {
-        //if let cityCell = tableView.dequeueReusableCell(withIdentifier: "CityCell",for:indexPath) as? CityCell {
-            performSegue(withIdentifier: "CityListSegue", sender: cities[indexPath.item])
-        //}
+        performSegue(withIdentifier: "CityListSegue", sender: cities[indexPath.item])
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {

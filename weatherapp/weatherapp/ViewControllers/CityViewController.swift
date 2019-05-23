@@ -83,8 +83,8 @@ class CityViewController: UIViewController, UITableViewDataSource {
                     return cell
                 }
             case .hourlyText:
-                if let cell = tableView.dequeueReusableCell(withIdentifier: "HourlyTextCell_ID", for: indexPath) as? HourlyTextCell {
-                    cell.configure(withWeatherDetails: weatherDetails)
+                if let cell = tableView.dequeueReusableCell(withIdentifier: "HourlyTextCell_ID", for: indexPath) as? TitleCell {
+                    cell.configure(withWeatherDetails: weatherDetails, sender: "HourlyText")
                     return cell
                 }
             case .hourly:
@@ -93,8 +93,8 @@ class CityViewController: UIViewController, UITableViewDataSource {
                     return cell
                 }
             case .dailyText:
-                if let cell = tableView.dequeueReusableCell(withIdentifier: "DailyTextCell_ID", for: indexPath) as? DailyTextCell {
-                    cell.configure(withWeatherDetails: weatherDetails)
+                if let cell = tableView.dequeueReusableCell(withIdentifier: "DailyTextCell_ID", for: indexPath) as? TitleCell {
+                    cell.configure(withWeatherDetails: weatherDetails, sender: "DailyText")
                     return cell
                 }
             case .daily:
@@ -103,8 +103,8 @@ class CityViewController: UIViewController, UITableViewDataSource {
                     return cell
                 }
             case .extraTitle:
-                if let cell = tableView.dequeueReusableCell(withIdentifier: "ExtraTitleCell_ID", for: indexPath) as? ExtraTitleCell {
-                    cell.configure(withWeatherDetails: weatherDetails)
+                if let cell = tableView.dequeueReusableCell(withIdentifier: "ExtraTitleCell_ID", for: indexPath) as? TitleCell {
+                    cell.configure(withWeatherDetails: weatherDetails, sender: "ExtraTitle")
                     return cell
                 }
             case .extra:
