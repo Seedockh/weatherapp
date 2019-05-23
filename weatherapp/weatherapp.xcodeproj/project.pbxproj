@@ -104,31 +104,47 @@
 		62998E6A2295222F0071F5FA /* weatherapp */ = {
 			isa = PBXGroup;
 			children = (
-				B1933D0922958A9300F6F397 /* CitiesListViewController.swift */,
+				B1138D4622966FB60055B21A /* Cells */,
+				B1138D4522966F990055B21A /* ViewControllers */,
 				62998E7D229524410071F5FA /* APIHandler.swift */,
 				62998E6B2295222F0071F5FA /* AppDelegate.swift */,
 				62998E72229522300071F5FA /* Assets.xcassets */,
 				62865DF322959011008AC309 /* icons8-delete-50.png */,
 				62865DF222959011008AC309 /* icons8-menu-50.png */,
 				B1DF372022952A3B00A2884C /* City.swift */,
-				62998E9F229568790071F5FA /* CityCell.swift */,
-				B1933D02229537B700F6F397 /* CityViewController.swift */,
-				62998E97229549AA0071F5FA /* HeaderCell.swift */,
-				B1933D04229563B100F6F397 /* HourlyCell.swift */,
-				62998E99229553140071F5FA /* HourlyTextCell.swift */,
 				62998E952295462C0071F5FA /* Icons */,
 				62998E77229522300071F5FA /* Info.plist */,
 				62998E74229522300071F5FA /* LaunchScreen.storyboard */,
 				62998E9D229565740071F5FA /* Lists.swift */,
 				62998E6F229522300071F5FA /* Main.storyboard */,
-				62998E6D229522300071F5FA /* ViewController.swift */,
 				62998E7F229529A00071F5FA /* WeatherDetails.swift */,
+			);
+			path = weatherapp;
+			sourceTree = "<group>";
+		};
+		B1138D4522966F990055B21A /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				B1933D02229537B700F6F397 /* CityViewController.swift */,
+				62998E6D229522300071F5FA /* ViewController.swift */,
+				B1933D0922958A9300F6F397 /* CitiesListViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		B1138D4622966FB60055B21A /* Cells */ = {
+			isa = PBXGroup;
+			children = (
 				B1933D062295805A00F6F397 /* DailyTextCell.swift */,
 				B1116EB322959ED900FECC99 /* DailyCell.swift */,
 				B1116EB52295A6BB00FECC99 /* ExtraTitleCell.swift */,
 				B1116EB72295A94E00FECC99 /* ExtraCell.swift */,
+				62998E9F229568790071F5FA /* CityCell.swift */,
+				62998E97229549AA0071F5FA /* HeaderCell.swift */,
+				B1933D04229563B100F6F397 /* HourlyCell.swift */,
+				62998E99229553140071F5FA /* HourlyTextCell.swift */,
 			);
-			path = weatherapp;
+			path = Cells;
 			sourceTree = "<group>";
 		};
 		D3E4976A368C635DF3A83B7C /* Frameworks */ = {
