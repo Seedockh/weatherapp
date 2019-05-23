@@ -55,6 +55,7 @@ class CitiesListViewController: UIViewController, UITableViewDataSource {
     override func viewDidLoad() {
         super.viewDidLoad()
         locationManager.requestAlwaysAuthorization()
+        locationManager.requestWhenInUseAuthorization()
         locationManager.startUpdatingLocation()
         cities.sort { $0.name < $1.name }
         tableView.dataSource = self
