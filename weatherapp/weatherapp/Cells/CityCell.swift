@@ -12,9 +12,15 @@ import SDWebImage
 class CityCell: UITableViewCell {
     
     @IBOutlet weak var nameLabel: UILabel!
+    @IBOutlet weak var distanceLabel: UILabel!
     
-    func configure(withCityName name: String) {
+    func configure(withCityName name: String, withDistance distance: Double) {
         nameLabel.text = name
+        if distance==0 {
+            distanceLabel.text = ""
+        } else {
+            distanceLabel.text = "\(Int(distance/1000)) km"
+        }
     }
     
 }

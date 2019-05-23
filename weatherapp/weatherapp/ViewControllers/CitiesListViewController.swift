@@ -15,9 +15,11 @@ class CitiesListViewController: UIViewController, UITableViewDataSource {
     @IBAction func switchSort(sender: UISegmentedControl) {  // Sorts cities by distance
         switch sender.selectedSegmentIndex {
         case 0:
+            leftPanel = true
             cities.sort { $0.name < $1.name }
             self.tableView.reloadData()
         case 1:
+            leftPanel = false
             if CLLocationManager.locationServicesEnabled() {
                 locationManager = CLLocationManager()
                 locationManager.delegate = self as? CLLocationManagerDelegate
@@ -49,13 +51,14 @@ class CitiesListViewController: UIViewController, UITableViewDataSource {
         }
     }
     
+    var leftPanel: Bool = true
     var locationManager = CLLocationManager()
     var cities = Lists.cities
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        locationManager.requestAlwaysAuthorization()
-        //locationManager.requestWhenInUseAuthorization()
+        //locationManager.requestAlwaysAuthorization()
+        locationManager.requestWhenInUseAuthorization()
         locationManager.startUpdatingLocation()
         cities.sort { $0.name < $1.name }
         tableView.dataSource = self
@@ -74,7 +77,13 @@ class CitiesListViewController: UIViewController, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         if let cityCell = tableView.dequeueReusableCell(withIdentifier: "CityCell",for:indexPath) as? CityCell {
-            cityCell.configure(withCityName: cities[indexPath.row].name)
+            if !leftPanel, let userLoc = locationManager.location {
+                cityCell.configure(withCityName: cities[indexPath.row].name, withDistance:
+                    CLLocation(latitude: userLoc.coordinate.latitude, longitude: userLoc.coordinate.longitude)
+                        .distance(from: CLLocation(latitude: cities[indexPath.row].coordinates.latitude,longitude: cities[indexPath.row].coordinates.longitude )) )
+            } else {
+                cityCell.configure(withCityName: cities[indexPath.row].name, withDistance: 0 )
+            }
             return cityCell
         }
         return UITableViewCell()

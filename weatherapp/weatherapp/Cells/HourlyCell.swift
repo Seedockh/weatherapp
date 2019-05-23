@@ -20,7 +20,7 @@ class HourlyCell: UITableViewCell {
         let date = NSDate(timeIntervalSince1970: weatherDetails?.hourly.data[index].time ?? 0)
         let dateFormatter = DateFormatter()
         dateFormatter.setLocalizedDateFormatFromTemplate("HH")
-        hour.text = "\(dateFormatter.string(from: date as Date))"
+        hour.text = "\(dateFormatter.string(from: date as Date))h"
         let localUrl = "./Icons/\(weatherDetails?.hourly.data[index].icon ?? "").png"
         weatherIcon.image = UIImage(named: localUrl)
         humidity.text = "\(Int((weatherDetails?.hourly.data[index].humidity ?? 0) * 100))%"

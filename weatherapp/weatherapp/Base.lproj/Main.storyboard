@@ -467,7 +467,13 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hSS-xe-Vnu">
-                                                    <rect key="frame" x="20" y="19" width="335" height="6"/>
+                                                    <rect key="frame" x="20" y="19" width="374" height="6"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pBG-P2-y6q">
+                                                    <rect key="frame" x="344" y="19" width="42" height="22"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
@@ -477,11 +483,15 @@
                                                 <constraint firstItem="hSS-xe-Vnu" firstAttribute="trailing" secondItem="nNf-Pv-qKI" secondAttribute="trailingMargin" id="AGf-M5-ktH"/>
                                                 <constraint firstItem="hSS-xe-Vnu" firstAttribute="centerX" secondItem="nNf-Pv-qKI" secondAttribute="centerX" id="Hkd-22-c6a"/>
                                                 <constraint firstItem="hSS-xe-Vnu" firstAttribute="leading" secondItem="nNf-Pv-qKI" secondAttribute="leadingMargin" id="L25-vG-Rzo"/>
+                                                <constraint firstItem="pBG-P2-y6q" firstAttribute="bottom" secondItem="nNf-Pv-qKI" secondAttribute="bottomMargin" constant="8" id="L5K-OP-MEY"/>
+                                                <constraint firstItem="pBG-P2-y6q" firstAttribute="top" secondItem="nNf-Pv-qKI" secondAttribute="topMargin" constant="8" id="Zcz-14-JOp"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="pBG-P2-y6q" secondAttribute="trailing" constant="8" id="aTu-ih-syl"/>
                                                 <constraint firstAttribute="bottomMargin" secondItem="hSS-xe-Vnu" secondAttribute="bottom" constant="8" id="ef4-Rh-wT9"/>
                                                 <constraint firstItem="hSS-xe-Vnu" firstAttribute="top" secondItem="nNf-Pv-qKI" secondAttribute="topMargin" constant="8" id="gXf-jq-46W"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
+                                            <outlet property="distanceLabel" destination="pBG-P2-y6q" id="CZo-k7-3fK"/>
                                             <outlet property="nameLabel" destination="hSS-xe-Vnu" id="TSV-tC-Hh2"/>
                                             <segue destination="Iga-VH-cxX" kind="show" identifier="CityListSegue" id="qp5-XR-PEg"/>
                                         </connections>
@@ -518,7 +528,7 @@
         <image name="icons8-menu-50.png" width="50" height="50"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="VLA-Af-JkR"/>
+        <segue reference="qp5-XR-PEg"/>
     </inferredMetricsTieBreakers>
     <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
 </document>
