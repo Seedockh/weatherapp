@@ -90,7 +90,7 @@ class CityViewController: UIViewController, UITableViewDataSource {
                 if let cell = tableView.dequeueReusableCell(withIdentifier: "HeaderCell_ID", for: indexPath) as? HeaderCell {
                     cell.configure(withWeatherDetails: weatherDetails)
                     cell.backgroundColor = UIColor.clear
-                    let imageView = UIImageView(image: UIImage(named: "./Images/\(weatherDetails?.currently.icon ?? "").jpg"))
+                    let imageView = UIImageView(image: UIImage(named: "\(weatherDetails?.currently.icon ?? "")-wp.jpg"))
                     imageView.alpha = 0.6
                     tableView.backgroundView = imageView
                     return cell

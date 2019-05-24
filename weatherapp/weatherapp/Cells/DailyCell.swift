@@ -21,7 +21,7 @@ class DailyCell: UITableViewCell {
         let dateFormatter = DateFormatter()
         dateFormatter.setLocalizedDateFormatFromTemplate("EEEE")
         dayLabel.text = "\(dateFormatter.string(from: date as Date))"
-        weatherIcon.image = UIImage(named: "./Icons/\(weatherDetails?.daily.data[index].icon ?? "").png")
+        weatherIcon.image = UIImage(named: "\(weatherDetails?.daily.data[index].icon ?? "").png")
         maxTempLabel.text = "\(Int(weatherDetails?.daily.data[index].temperatureMax ?? 0))°C"
         minTempLabel.text = "\(Int(weatherDetails?.daily.data[index].temperatureMin ?? 0))°C"
     }
